@@ -12,8 +12,8 @@ const skills = ["Recruiting","Cold Calling","HR","Sourcing","Javascript","HTML",
 skillsSection = document.querySelector('#skills');
 skillsList = skillsSection.querySelector('ul');
 
-for(i in skills){
-    skill=document.createElement('li');
-    skill.innerHTML = skills[i];
+for(i of skills){
+    const skill=document.createElement('li');
+    skill.innerHTML = i;
     skillsList.appendChild(skill);
 }
