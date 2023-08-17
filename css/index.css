@@ -1,7 +1,7 @@
 body {
     background-color: beige;
     color: darkslategray;
-    font-family: "Noto Serif";
+    font-family: 'Oswald', sans-serif;
 }
 
 section{
@@ -50,8 +50,8 @@ button{
     border-radius: 50%;
 }
 
-li{
-    margin: 2.5px;
+.msg{
+    margin: 5px;
     padding: 5px;
     display: block;
     
