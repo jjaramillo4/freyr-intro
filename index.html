@@ -1,21 +1,37 @@
-
 <!DOCTYPE html>
 <!--A comment--> 
 <html>
   <head>
     <title>Web Page</title>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" h>
   </head>
   <body>
-    <section> 
+    <section>
+    <header class="header">
+      <h1 class="nav-header">Javier's Home Page</h1>
+       <nav class="navbar">
+          <a  href="#about">About</a>
+          <a  href="#experience">Experience</a>
+          <a  href="#skills">Skills</a>
+          <a  href="#connect">Connect</a>
+          <a  href="#leave-a-message">Leave A Message</a>
+          <a  href="#messages">Messages</a>
+       </nav>
+    </header>
+  </section>
+    <section id="about"> 
       <h1>About</h1> 
       <p>A little bit about my background. I graduated from GSU with a degree in Computer Information Systems. After completing a couple of internships, I realized that I was not interested in IT.</p>  
       <p>After interviewing and researching, I transitioned into recruiting. I did so because I enjoyed talking and helping individuals out, especially when came to helping them find work. I feel like a positive impact on jobseekers. </p>
       <p>I have developed many soft skills thanks to recruiting and it has helped me become a better listener and has help me ask better questions when it came to getting the information that I needed. After doing for three years, I decided to change my career trajectory and started relearning Python. I stumbled into Data Analytics and became very passionate about the work and field.
        Even though I enjoyed Data Analytics, I decided I would rather be a software Developer and I am now taking a course with Code The Dream.</p></section>
  
-    <section>
-      <h1>Experience</h1>
+    <section class="flexbox-container-one" id="experience">
+      <h1 class="flex-item-one">Experience</h1>
       <p>I have been recruiting and doing HR for 3 years at this point, I programmed in Java and Python in the past since I took a programming course in college.</p>
     </section>
 
@@ -27,16 +43,16 @@
 
     </section>
     
-     <section>
-      <h1>Connect</h1>
+     <section id="connect">
+      <h1 class="flex-item-one">Connect</h1>
       <ul>
         <li>https://github.com/jjaramillo4</li>
         <li>https://www.linkedin.com/in/javier-j-jaramillo/</li>
      </ul>
  </section>
- <section>
-   <h2>Leave a Message</h2>
-   <form id="leave_message">
+ <section class="flexbox-container-two" id="leave-a-message">
+   <h2 class="flex-item-one">Leave a Message</h2>
+   <form name="leave_message" id="leave_message" class="flex-item-two">
     <label for="usrName">Name:</label>
     <input type="text" id="usrName" name="usersName" required="true"><br>
     <label for="usrEmail">Email:</label>
@@ -47,7 +63,7 @@
    </form>
  </section>
  <section id="messages">
- <h3>Messages</h3>
+ <h2>Messages</h2>
  <ul>
   
  </ul>
