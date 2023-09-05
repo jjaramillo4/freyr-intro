@@ -54,3 +54,4 @@ messageSection.appendChild(messageList);
 
 messageForm.reset();
 });
+
