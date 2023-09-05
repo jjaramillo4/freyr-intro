@@ -127,10 +127,10 @@ footer {
 
 @media screen and (min-width: 790px) {
   p {
-    display: flex;
+
   }
   .flexbox-container-one {
-    display: flex;
+   
     flex-direction: column;
 }
 }
