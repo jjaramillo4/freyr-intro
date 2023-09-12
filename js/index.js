@@ -55,3 +55,28 @@ messageSection.appendChild(messageList);
 messageForm.reset();
 });
 
+
+
+fetch("https://api.github.com/users/jjaramillo4/repos")
+    .then(function(response){
+        if(!response.ok){
+            throw new Error();
+            
+        }
+        let repositories=response.json();
+        console.log(repositories);
+        return repositories;
+    })
+    .then(function(repositories){
+        let projectSection = document.getElementById("projects");
+        projectList = projectSection.querySelector('ul');
+
+        for(i = 0; i < repositories.length; i++){
+            let project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+    console.error(error);
+    });
