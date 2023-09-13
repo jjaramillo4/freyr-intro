@@ -55,29 +55,30 @@ messageSection.appendChild(messageList);
 messageForm.reset();
 });
 
-let githubRequest = new XMLHttpRequest();
 
-githubRequest.open("GET","https://api.github.com/users/jjaramillo4/repos");
-githubRequest.send();
 
-//I could not get the project with this code because it told me that load was undefined. 
-//I would like to know how to make it work this way.
 
-//githubRequest.addEventListener("load", (event)=>{
-//   let repositories=JSON.parse(this.response);
-//  console.log(respositories); 
-//})
-githubRequest.onload =function(){
- let repositories=JSON.parse(this.response);
- console.log(repositories);
- let projectSection = document.getElementById("projects");
-projectList = projectSection.querySelector('ul');
+fetch("https://api.github.com/users/jjaramillo4/repos")
+    .then(function(response){
+        if(!response.ok){
+            throw new Error();
+            
+        }
+        let repositories=response.json();
+        console.log(repositories);
+        return repositories;
+    })
+    .then(function(repositories){
+        let projectSection = document.getElementById("projects");
+        projectList = projectSection.querySelector('ul');
 
-for(i = 0; i < repositories.length; i++){
-    let project = document.createElement('li');
-    project.innerText = repositories[i].name;
-    projectList.appendChild(project);
-}
-
-}
+        for(i = 0; i < repositories.length; i++){
+            let project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+    console.error(error);
+    });
 
