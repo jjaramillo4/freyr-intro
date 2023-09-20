@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    background-color: beige;
+    background-color: #F8F8FF;
     color: darkslategray;
     font-family: 'Oswald', sans-serif;
 }
@@ -13,16 +13,24 @@ section{
 h1,h2,h3{
     font-size: large;
     font-weight: 1024px;
-    color:navy
+    color:#483D8B
 }
 
-#skills{
-  display: block;
+
+
+li.skill-list {
+    display: inline;
+    border: #483D8B;
+    border: size 10px;
+    padding: 10px;
+    margin: 10px;
+    border-style:dashed;
+  
 }
 
 label{
     font-size: medium;
-    color: darkgreen;
+    color: darkslategray;
     padding: 5px;
     margin: 5px;
     display: block;
@@ -36,26 +44,31 @@ input{
 
 }
 textarea{
-    width: 100%;
-    height: 150px;
+    width: 250px;
+    height: 100px;
     padding: 12px 20px;
     box-sizing: border-box;
     resize: none;
 }
 
 button{
-    padding: 5px ;
-    margin: 5px;
-    background-color: lightgray;
-    border-style: double;
-    border-radius: 50%;
+    background-color:#483D8B;
+    border-radius: var(--rounded);
+    color:white;
+    min-width: 100px;
+    padding: 0.5rem 1rem;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .msg{
-    margin: 5px;
-    padding: 5px;
+    width: 40%;
+    height: 100px;
+    padding: 10px;
     display: block;
 
+}
+span {
+    padding: 15px;
 }
 
 img{
@@ -66,20 +79,26 @@ img{
 }
 
 footer {
-    height: min-content;
-    width: min-content;
-    background-color: lightcyan;
+  
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:black;
+    text-align: center;
 }
 
 .flexbox-container-one {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .flexbox-container-two {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 
 }
 
@@ -89,19 +108,17 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.flex-item-two{
-    flex-direction: column;
-}
+
 
 .header{
-    position: fixed;
+    
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 150px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    
     z-index: 100;
 
 
@@ -110,7 +127,7 @@ footer {
 
 .navbar a {
     font-size: 18px;
-    color: brown;
+    color: #FF6347;
     font-weight: 500;
     text-decoration: none;
     padding: 20px;
@@ -119,18 +136,40 @@ footer {
 
 .nav-header {
     font-size: 32px;
-    color:brown;
+    color:#FF6347;
     text-decoration: none;
     font-weight: 700;
+    
 
 }
 
-@media screen and (min-width: 790px) {
-  p {
-    
-  }
+@media screen and (max-width: 900px) {
+
   .flexbox-container-one {
   
     flex-direction: column;
+}
+ .header {
+    display: inline;
+    width: 25%;
+    padding: 5px 25px;
+    justify-content: left;
+ }
+
+ .navbar a {
+    font-size: 15px;
+    font-weight: 100;
+    padding: 5px;
+    margin: 5px;
+    display: inline;
+}
+
+ li.skill-list {
+    display: list-item;
+    border: size 5px;
+    padding: 5px;
+    margin: 5px;
+    border-style:dashed;
+  
 }
 }

@@ -14,6 +14,7 @@ skillsList = skillsSection.querySelector('ul');
 
 for(i of skills){
     const skill=document.createElement('li');
+    skill.classList.add("skill-list");
     skill.innerHTML = i;
     skillsList.appendChild(skill);
 }
@@ -61,7 +62,7 @@ messageForm.reset();
 fetch("https://api.github.com/users/jjaramillo4/repos")
     .then(function(response){
         if(!response.ok){
-            throw new Error();
+            new Error("Error: "+ `${response.status} ${response.statusText}`);
             
         }
         let repositories=response.json();
@@ -74,7 +75,13 @@ fetch("https://api.github.com/users/jjaramillo4/repos")
 
         for(i = 0; i < repositories.length; i++){
             let project = document.createElement('li');
-            project.innerText = repositories[i].name;
+            let projectLink = document.createElement('a');
+            var projectName = document.createTextNode(repositories[i].name);
+            projectLink.target="_blank"
+            projectLink.appendChild(projectName);
+            projectLink.href = repositories[i].html_url;
+            console.log(projectLink);
+            project.append(projectLink);
             projectList.appendChild(project);
         }
     })
