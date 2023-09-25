@@ -300,14 +300,6 @@ footer {
         float: right;
      }
     
-     .links {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-      
-    }
-    
      li.skill-list {
         display: list-item;
         border: size 5px;
