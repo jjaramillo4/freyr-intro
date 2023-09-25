@@ -4,42 +4,47 @@
 <html>
   <head>
     <title>Javier Jaramillo's Page</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <section>
-      <header class="header">
+    <section class="top-nav">
+      <div>
         <h1 class="nav-header">Javier's Home Page</h1>
-         <nav class="navbar">
-            <a  href="#about">About</a>
-            <a  href="#experience">Experience</a>
-            <a  href="#skills">Skills</a>
-            <a  href="#connect">Connect</a>
-            <a  href="#leave-a-message">Leave A Message</a>
-            <a  href="#messages">Messages</a>
-         </nav>
-      </header>
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+      <ul class="menu">
+        <li><a  href="#about" class="links">About</a></li>
+        <li><a  href="#experience" class="links">Experience</a></li>
+        <li><a  href="#skills" class="links">Skills</a></li>
+        <li><a  href="#projects" class="links">Projects</a></li>
+        <li><a  href="#connect" class="links">Connect</a></li>
+        <li><a  href="#leave-a-message" class="links">Leave A Message</a></li>
+        <li><a  href="#messages" class="links">Messages</a></li>
+      </ul>
     </section>
     <section id="about"> 
-      <h1>About</h1> 
+      <h2>About</h2> 
       <p>A little bit about my background, I graduated from GSU with a degree in Computer Information Systems. After completing a couple of internships doing helpdesk and IT work, I realized that I was skill interested technology but not in IT.</p>  
-      <p>Afterresearching for a new career path, I transitioned into recruiting. I did so because I enjoyed talking and helping individuals out, especially when came to helping them find work. I feel like I would have a positive impact on jobseekers. </p>
+      <p>After researching for a new career path, I transitioned into recruiting. I did so because I enjoyed talking and helping individuals out, especially when came to helping them find work. I feel like I would have a positive impact on jobseekers. </p>
       <p>I have developed many soft skills thanks to recruiting and it has helped me become a better listener, talk me how to ask better questions, and empathize with others. After doing for three years, I decided to change my career trajectory and started relearning Python.</p>
       <p>Even though I enjoyed Data Analytics, I decided I would rather be a software developer and I am now taking a course with Code The Dream.</p></section>
  
    
     <section class="flexbox-container-one" id="experience">
-      <h1 class="flex-item-one">Experience</h1>
+      <h2 class="flex-item-one">Experience</h2>
       <p>I have been recruiting and doing HR for 3 years at this point, I programmed in Java and Python in the past since I took a programming course in college.</p>
       <p>I have also took Google Data Analytics course on Coursera. I learned about SQL, Tableau, and programming graphs with R.</p>
       <P>I recently completed a class with Code The Dream. During 16 week period. I learend about JavaScript, HTML, and CSS. </P>
     </section>
 
-    <section id = "skills">
+    <section id = "skills" class="flex-container-three">
      <h2>Skills</h2>
      <ul>
 
@@ -73,7 +78,7 @@
     <button type="submit">Submit</button>
    </form>
  </section>
- <section id="messages">
+ <section id="messages" class="flex-container-four">
  <h2>Messages</h2>
  <ul>
   
